@@ -1,4 +1,4 @@
-.fullscreen-image {
+.pinboard {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,4 +6,15 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1; /* put it behind other content */
+  }
+
+.pin {
+    position: absolute;
+    width: 120px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: grab;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    user-select: none;
   }

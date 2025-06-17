@@ -1,16 +1,34 @@
-function dragstartHandler(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  
-  function dragoverHandler(ev) {
-    ev.preventDefault();
-  }
-  
-  function dropHandler(ev) {
-    ev.preventDefault();
-    const data = ev.dataTransfer.getData("text");
-    const draggedElement = document.getElementById(data);
-    // Move the pin to where it was dropped
-    draggedElement.parentElement.style.left = ev.clientX + 'px' - 100;
-    draggedElement.parentElement.style.top = ev.clientY + 'px' - 100;
-  }
+// Select all pins
+const pins = document.querySelectorAll('.pin');
+
+pins.forEach(pin => {
+  pin.onmousedown = function(event) {
+    const dragged = event.currentTarget;
+
+    dragged.style.position = 'absolute';
+    dragged.style.zIndex = 1000;
+
+    // Move dragged element directly to body to position relative to page
+    document.body.append(dragged);
+
+    function moveAt(pageX, pageY) {
+      dragged.style.left = pageX - dragged.offsetWidth / 2 + 'px';
+      dragged.style.top = pageY - dragged.offsetHeight / 2 + 'px';
+    }
+
+    moveAt(event.pageX, event.pageY);
+
+    function onMouseMove(event) {
+      moveAt(event.pageX, event.pageY);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+
+    dragged.onmouseup = function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      dragged.onmouseup = null;
+    };
+
+    event.preventDefault();
+  };
+});

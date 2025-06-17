@@ -9,7 +9,8 @@
   }
 
   .pin {
-    position: absolute;
-    width: 100%;
+    position: fixed;
     cursor: grab;
+    object-fit: cover;
+
   }

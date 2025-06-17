@@ -33,4 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
     };
     });
+
+    pins.forEach(pin => {
+    pin.onmouseover = function(event) {
+        
+    };
+    });
 });

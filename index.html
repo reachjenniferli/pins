@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello, World!</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="pinboard">
         <!-- Example pins -->
-        <div class="pin" style="left: 50px; top: 50px;">
-          <img src="orioles.png" alt="Orioles" />
+        <div class="pin">
+            <img id="img1" src="orioles.png" alt="Orioles" draggable="true" ondragstart="dragstartHandler(event)">
           <p>Orioles</p>
         </div>
     </div>

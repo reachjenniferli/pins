@@ -11,6 +11,6 @@ function dragstartHandler(ev) {
     const data = ev.dataTransfer.getData("text");
     const draggedElement = document.getElementById(data);
     // Move the pin to where it was dropped
-    draggedElement.parentElement.style.left = ev.clientX + 'px';
-    draggedElement.parentElement.style.top = ev.clientY + 'px';
+    draggedElement.parentElement.style.left = ev.clientX + 'px' - 100;
+    draggedElement.parentElement.style.top = ev.clientY + 'px' - 100;
   }

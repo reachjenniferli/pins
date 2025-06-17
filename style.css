@@ -8,8 +8,26 @@
     z-index: -1; /* put it behind other content */
   }
 
-.pin {
+
+  .pin {
     position: absolute;
+    width: 120px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     cursor: grab;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     user-select: none;
+  }
+  
+  .pin img {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .pin p {
+    margin: 8px;
+    font-size: 14px;
+    text-align: center;
   }

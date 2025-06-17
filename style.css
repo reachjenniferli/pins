@@ -8,8 +8,8 @@
     z-index: -1; /* put it behind other content */
   }
 
-
   .pin {
     position: absolute;
     width: 100%;
+    cursor: grab;
   }

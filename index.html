@@ -6,9 +6,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="pinboard">
+    <div class="pinboard" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
         <!-- Example pins -->
-        <div class="pin">
+        <div class="pin" style="left: 100px; top: 100px;">
             <img id="img1" src="orioles.png" alt="Orioles" draggable="true" ondragstart="dragstartHandler(event)">
         </div>
         <img src="background.PNG" class="pinboard">

@@ -9,5 +9,8 @@ function dragstartHandler(ev) {
   function dropHandler(ev) {
     ev.preventDefault();
     const data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    const draggedElement = document.getElementById(data);
+    // Move the pin to where it was dropped
+    draggedElement.parentElement.style.left = ev.clientX + 'px';
+    draggedElement.parentElement.style.top = ev.clientY + 'px';
   }

@@ -2,8 +2,19 @@ document.addEventListener('DOMContentLoaded', () => { // waits until all html co
     // Select all pins
     const pins = document.querySelectorAll('.pin');
 
+    function isInWhiteboard(x, y) {
+        const rect = root.getBoundingClientRect();
+        return (
+          x >= (rect.left - 40) &&
+          x <= (rect.right + 40) &&
+          y >= (rect.top - 40) &&
+          y <= (rect.bottom + 40)
+        );
+      }
+
     pins.forEach(pin => {
     pin.onmousedown = function(event) {
+
         const dragged = event.currentTarget;
 
         const offsetX = event.clientX - dragged.getBoundingClientRect().left;
@@ -25,6 +36,12 @@ document.addEventListener('DOMContentLoaded', () => { // waits until all html co
         moveAt(event.pageX, event.pageY);
 
         function onMouseMove(event) {
+            if (isInWhiteboard(event.clientX, event.clientY)) {
+                document.removeEventListener('mousemove', onMouseMove);
+                dragged.onmouseup = null;
+                dragged.classList.remove('dragging')
+                return;
+            }
             moveAt(event.pageX, event.pageY);
         }
 
@@ -33,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => { // waits until all html co
         dragged.onmouseup = function() {
             document.removeEventListener('mousemove', onMouseMove);
             dragged.onmouseup = null;
-
             dragged.classList.remove('dragging')
         };
 

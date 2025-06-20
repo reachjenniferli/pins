@@ -1,3 +1,23 @@
+
+
+#root {
+  position: absolute;
+  left: 800px;
+  top: 200px;
+  cursor: url(marker.png), auto;
+  z-index: -998;
+}
+
+#whiteboard {
+  width: 450px; 
+  position: absolute; 
+  left: 750px; 
+  top: 150px; 
+  right: 20px; 
+  cursor:pointer; 
+  z-index: -999;
+}
+
 .pinboard {
   position: absolute;
   top: 0;

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { // waits until all html content is loaded
     // Select all pins
     const pins = document.querySelectorAll('.pin');
 

@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/lemonadejs/dist/lemonade.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@lemonadejs/signature/dist/index.min.js"></script>
+  
 </head>
-<body>
+
+<body style="background-color: rgb(148, 124, 92);">
+
+    <img id="whiteboard" src="whiteboard.png" alt="Sign here" draggable="false"/>
+
+
+    <div id="root"></div>
+    <!-- <input type="button" value="Reset" id="resetCanvas"/> -->
+
     <div class="pinboard" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
 
         <div class="pin" style="left: 998.5px; top: 38.5px; width: 140px;">
@@ -241,7 +252,7 @@
         <div class="pin" style="left: 850px; top: 52px; width: 140px;">
             <div class="pin-inner">
                 <div class="pin-front">
-                    <img id="BotanicGarden" src="pins/botanic garden.png" alt="Taiwan" draggable="true" ondragstart="dragstartHandler(event)" width=140px>
+                    <img id="BotanicGarden" src="pins/botanic garden.png" alt="Botanic Garden" draggable="true" ondragstart="dragstartHandler(event)" width=140px>
                 </div>
                 <div class="pin-back">
                 <img id="BotanicGardenBack" src="pins/botanic garden back.png" alt="Botanic Garden Back" draggable="true" ondragstart="dragstartHandler(event)" width=140px>
@@ -296,5 +307,6 @@
         <img src="" class="pinboard">
     </div>
     <script src="script.js"></script>
+    <script src="signature.js"></script>
 </body>
 </html>

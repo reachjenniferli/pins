@@ -2,7 +2,7 @@
 
 #root {
   position: absolute;
-  left: 800px;
+  left: 700px;
   top: 200px;
   cursor: url(marker.png), auto;
   z-index: -998;
@@ -11,7 +11,7 @@
 #whiteboard {
   width: 450px; 
   position: absolute; 
-  left: 750px; 
+  left: 650px; 
   top: 150px; 
   right: 20px; 
   cursor:pointer; 

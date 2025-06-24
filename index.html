@@ -5,21 +5,16 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/lemonadejs/dist/lemonade.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@lemonadejs/signature/dist/index.min.js"></script>
-  
 </head>
 
-<body style="
-  background-image: url('corkboard.jpg');
-  background-repeat: repeat;
-  background-size: auto;
-">
-    <img id="whiteboard" src="whiteboard.png" alt="Sign here" draggable="false"/>
+<body>
 
-
-    <div id="root"></div>
-    <!-- <input type="button" value="Reset" id="resetCanvas"/> -->
 
     <div class="pinboard" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+
+        <img id="whiteboard" src="whiteboard.png" alt="Sign here" draggable="false"/>
+
+        <div id="drawing"></div>
 
         <div class="pin" style="left: 898.5px; top: 38.5px; width: 140px;">
             <div class="pin-inner">

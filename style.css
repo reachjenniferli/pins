@@ -1,6 +1,10 @@
+body {
+  background-image: url('corkboard.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+}
 
-
-#root {
+#drawing {
   position: absolute;
   left: 700px;
   top: 200px;

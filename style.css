@@ -24,10 +24,8 @@ body {
 
 .pinboard {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   background-attachment: scroll;
   z-index: -1; /* put it behind other content */
